@@ -36,7 +36,7 @@ function nxtgen_educentre_setup() {
 
     // Add image sizes
     add_image_size('hero-image', 1200, 600, true);
-    add_image_size('course-thumbnail', 400, 300, true);
+    // Course thumbnail size removed for new course structure
     add_image_size('university-thumbnail', 350, 250, true);
 }
 add_action('after_setup_theme', 'nxtgen_educentre_setup');
@@ -288,26 +288,7 @@ add_action('widgets_init', 'nxtgen_educentre_widgets_init');
  * Custom post types
  */
 function nxtgen_educentre_custom_post_types() {
-    // Courses Post Type
-    register_post_type('courses', array(
-        'labels' => array(
-            'name' => 'Courses',
-            'singular_name' => 'Course',
-            'add_new' => 'Add New Course',
-            'add_new_item' => 'Add New Course',
-            'edit_item' => 'Edit Course',
-            'new_item' => 'New Course',
-            'view_item' => 'View Course',
-            'search_items' => 'Search Courses',
-            'not_found' => 'No courses found',
-            'not_found_in_trash' => 'No courses found in trash',
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-        'menu_icon' => 'dashicons-welcome-learn-more',
-        'rewrite' => array('slug' => 'courses'),
-    ));
+    // Courses Post Type - Removed for new course structure
 
     // Universities Post Type
     register_post_type('universities', array(

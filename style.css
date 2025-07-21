@@ -218,10 +218,10 @@ header:hover {
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
-  min-height: 500px; 
+  min-height: 250px; 
   background: linear-gradient(120deg, #e3eafc 0%, #f7f8fa 100%); 
   text-align: center; 
-  padding: 3rem 1rem 2rem 1rem; 
+  padding: 2rem 1rem 1rem 1rem; 
   animation: fadeIn 1.2s 0.2s both; 
   position: relative; 
   overflow: hidden; 
@@ -265,9 +265,9 @@ header:hover {
 
 .hero h1 { 
   font-family: 'Montserrat', serif; 
-  font-size: 3.5rem; 
+  font-size: 2.8rem; 
   color: #ffffff; 
-  margin-bottom: 1rem; 
+  margin-bottom: 0.5rem; 
   font-weight: 700; 
   text-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4); 
   animation: titleGlow 2s ease-in-out infinite alternate; 
@@ -279,7 +279,7 @@ header:hover {
 }
 
 .hero p { 
-  font-size: 1.4rem; 
+  font-size: 1.2rem; 
   color: #ffffff; 
   max-width: 700px; 
   margin: 0 auto; 
@@ -937,7 +937,12 @@ header:hover {
   } 
   
   .hero p { 
-    font-size: 1.1rem; 
+    font-size: 1rem; 
+  }
+  
+  .hero { 
+    min-height: 180px; 
+    padding: 1.5rem 1rem 1rem 1rem; 
   } 
   
   .features-section,

@@ -99,10 +99,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 320px;
+      min-height: 200px;
       background: linear-gradient(120deg, #e3eafc 0%, #f7f8fa 100%);
       text-align: center;
-      padding: 3rem 1rem 2rem 1rem;
+      padding: 2rem 1rem 1rem 1rem;
       animation: fadeIn 1.2s 0.2s both;
     }
     @keyframes fadeIn {
@@ -222,6 +222,10 @@
         gap: 1rem;
         padding: 1rem 1rem;
       }
+      .hero {
+        min-height: 150px;
+        padding: 1.5rem 1rem 1rem 1rem;
+      }
     }
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.6rem; }
@@ -245,16 +249,13 @@
         <a href="Contact.html">Contact</a>
         <a href="Faculty.html">Faculty</a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-      </div>
     </nav>
   </header>
-  <section class="hero" style="position:relative; overflow:hidden; min-height:320px; background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;">
+  <section class="hero" style="position:relative; overflow:hidden; min-height:200px; background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center center/cover no-repeat;">
     <div style="position:absolute; inset:0; background:rgba(44,108,223,0.35); z-index:0;"></div>
-    <div style="position:relative; z-index:1; padding:3rem 1rem 2rem 1rem; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:320px;">
+    <div style="position:relative; z-index:1; padding:2rem 1rem 1rem 1rem; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:200px;">
       <h1 style="color:#fff; text-shadow:0 2px 16px rgba(0,0,0,0.25);">About Us</h1>
-      <p style="color:#f7f8fa; max-width:700px; margin:0 auto; text-shadow:0 1px 8px rgba(0,0,0,0.18); font-size:1.2rem;">Nxt Gen EduCenter (NGEC) is an ISO 9001:2008 Certified Institute providing Regular, Distance, and Online Education. We have a wide network in different cities of Punjab and Himachal Pradesh, committed to transforming education and empowering communities.</p>
+      <p style="color:#f7f8fa; max-width:700px; margin:0 auto; text-shadow:0 1px 8px rgba(0,0,0,0.18); font-size:1.2rem;">Nxt Gen EduCenter (NGEC) is an ISO 9001:2008 Certified Institute providing Regular, Distance, and Online Education. We have a wide network in different cities of Punjab and Himachal Pradesh, committed to transforming education and empowering communities.<br>Address: Adda Jhungian Binewal Garhshankar Hoshiarpur 144523 Punjab</p>
     </div>
   </section>
   <main class="main-content">
@@ -276,19 +277,13 @@
     <div class="footer-content">
       <div class="footer-col">
         <h4>Contact Info</h4>
-        <p><strong>Email:</strong> nxtgen.educentre@gmail.com</p>
-        <p><strong>Mob:</strong> 93161-30112</p>
+        <p><strong>Email:</strong> <a href="mailto:info@nxtgeneducentre.org" style="color: inherit; text-decoration: underline;">info@nxtgeneducentre.org</a></p>
+        <p><strong>Mob:</strong> <a href="tel:+919316130112" style="color: inherit; text-decoration: underline;">+91-93161-30112</a></p>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <p>Copyright © NXT GEN EDU CENTRE</p>
         <p>All Rights Reserved.</p>
-        <p>You are visitor No.</p>
-        <a href="http://sign-x.in/" target="_blank">Designed by Sign-X</a>
-      </div>
-      <div class="footer-col">
-        <h4>Courses</h4>
-        <p>We have a great set of courses for you to choose from to help further your education.</p>
       </div>
     </div>
     <div class="footer-bottom">

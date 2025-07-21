@@ -11,7 +11,7 @@
 <section class="hero">
     <div class="hero-content">
         <h1><?php echo get_theme_mod('hero_title', 'Welcome to Nxt Gen EduCentre'); ?></h1>
-        <p><?php echo get_theme_mod('hero_subtitle', 'Empowering students with quality education and comprehensive learning resources for a brighter future.'); ?></p>
+        <p><?php echo get_theme_mod('hero_subtitle', ''); ?></p>
     </div>
 </section>
 

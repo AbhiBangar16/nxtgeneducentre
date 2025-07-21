@@ -21,6 +21,26 @@ get_header(); ?>
 </section>
 
 <main class="main-content">
+    <!-- Contact Details Section -->
+    <section class="contact-details-section scroll-animate" style="width: 100%; background: var(--card-bg); border-radius: 18px; box-shadow: var(--shadow); padding: 2rem; margin-bottom: 2rem; text-align: center;">
+        <h2 style="color: var(--accent); font-family: 'Montserrat', serif; font-size: 2rem; margin-bottom: 1.5rem;"><?php echo get_theme_mod('contact_details_title', 'Contact Information'); ?></h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem; max-width: 800px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="color: var(--primary); font-family: 'Montserrat', serif; font-size: 1.2rem; margin-bottom: 0.5rem;">📍 Address</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;"><?php echo get_theme_mod('contact_address', 'Nxt Gen EduCentre<br>Punjab, India'); ?></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="color: var(--primary); font-family: 'Montserrat', serif; font-size: 1.2rem; margin-bottom: 0.5rem;">📞 Phone</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;"><a href="tel:<?php echo get_theme_mod('contact_phone', '+919316130112'); ?>" style="color: var(--text); text-decoration: none; transition: color 0.3s;"><?php echo get_theme_mod('contact_phone', '+91 93161-30112'); ?></a></p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="color: var(--primary); font-family: 'Montserrat', serif; font-size: 1.2rem; margin-bottom: 0.5rem;">✉️ Email</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;"><a href="mailto:<?php echo get_theme_mod('contact_email', 'nxtgen.educentre@gmail.com'); ?>" style="color: var(--text); text-decoration: none; transition: color 0.3s;"><?php echo get_theme_mod('contact_email', 'nxtgen.educentre@gmail.com'); ?></a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Contact Form Section -->
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
         <section class="contact-section scroll-animate">
             <h2><?php echo get_theme_mod('contact_form_title', 'Get in Touch'); ?></h2>
@@ -49,13 +69,6 @@ get_header(); ?>
                 <a class="sidebar-link" href="<?php echo home_url('/'); ?>">Home</a>
                 <a class="sidebar-link" href="<?php echo get_permalink(get_page_by_path('courses')); ?>">Courses</a>
                 <a class="sidebar-link" href="<?php echo get_permalink(get_page_by_path('downloads')); ?>">Downloads</a>
-            </div>
-            
-            <div style="margin-top: 2rem;">
-                <h4><?php echo get_theme_mod('contact_info_title', 'Contact Information'); ?></h4>
-                <p><strong>Email:</strong> <?php echo get_theme_mod('contact_email', 'nxtgen.educentre@gmail.com'); ?></p>
-                <p><strong>Phone:</strong> <?php echo get_theme_mod('contact_phone', '93161-30112'); ?></p>
-                <p><strong>Address:</strong> <?php echo get_theme_mod('contact_address', 'Your Address Here'); ?></p>
             </div>
         </aside>
     </div>

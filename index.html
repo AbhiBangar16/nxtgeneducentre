@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Nxt Gen EduCentre</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&family=Poppins:wght@700;900&family=Inter:wght@700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
     :root {
@@ -523,11 +523,12 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to Nxt Gen EduCentre</h1>
+      <h1 style="font-family: 'Poppins', 'Inter', 'Roboto', Arial, sans-serif; font-size: 3.2rem; font-weight: 900; color: #fff; letter-spacing: 1.5px; margin-bottom: 0.5rem;">Nxt Gen Educentre</h1>
+      <p style="font-size: 1.4rem; color: #fff; font-weight: 500; margin-bottom: 1.2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.25);">Empowering Healthcare Professionals Through Data Driven Care</p>
       <div class="typing-text">
-        <p>Empowering students through quality education, innovation, and excellence</p>
+        <p></p>
       </div>
-      <p style="margin-top: 1rem; animation-delay: 2s;">Discover our courses, connect with our community, and start your learning journey today!</p>
+      <p style="margin-top: 1rem; animation-delay: 2s;"></p>
     </div>
   </section>
 
@@ -537,14 +538,12 @@
       <p>We are dedicated to providing accessible, high-quality education for all. Our programs are designed to meet the needs of a diverse student body, from urban centers to rural communities.</p>
       <p>Join us and experience a transformative approach to learning and personal growth. Explore our wide range of courses, connect with experienced faculty, and become part of a vibrant educational community.</p>
     </section>
-    <aside class="quick-links scroll-animate">
-      <h3>Quick Links</h3>
-      <div class="quick-links-list">
-        <a class="quick-link" href="Courses.html">View Courses</a>
-        <a class="quick-link" href="Universities.html">Our Universities</a>
-        <a class="quick-link" href="Downloads.html">Downloads</a>
-        <a class="quick-link" href="Contact.html">Contact Us</a>
-        <a class="quick-link" href="Faculty.html">Faculty</a>
+    <aside class="image-slider scroll-animate">
+      <div class="slider-container" style="position:relative; width:100%; max-width:420px; height:300px; margin:0 auto; overflow:hidden; border-radius:16px; box-shadow:0 4px 24px rgba(44,62,80,0.10); background:#fff;">
+        <img class="slider-image" src="class1.jpg" alt="Classroom 1" style="width:100%; display:block; transition:transform 0.7s cubic-bezier(.77,0,.18,1);">
+        <img class="slider-image" src="class2.jpg" alt="Classroom 2" style="width:100%; display:none; position:absolute; top:0; left:0;">
+        <img class="slider-image" src="class3.jpg" alt="Classroom 3" style="width:100%; display:none; position:absolute; top:0; left:0;">
+        <img class="slider-image" src="class4.jpg" alt="Classroom 4" style="width:100%; display:none; position:absolute; top:0; left:0;">
       </div>
     </aside>
   </main>
@@ -553,19 +552,13 @@
     <div class="footer-content">
       <div class="footer-col">
         <h4>Contact Info</h4>
-        <p><strong>Email:</strong> nxtgen.educentre@gmail.com</p>
-        <p><strong>Mob:</strong> 93161-30112</p>
+        <p><strong>Email:</strong> <a href="mailto:info@nxtgeneducentre.org" style="color: inherit; text-decoration: underline;">info@nxtgeneducentre.org</a></p>
+        <p><strong>Mob:</strong> <a href="tel:+919316130112" style="color: inherit; text-decoration: underline;">+91-93161-30112</a></p>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <p>Copyright © NXT GEN EDU CENTRE</p>
         <p>All Rights Reserved.</p>
-        <p>You are visitor No.</p>
-        <a href="http://sign-x.in/" target="_blank">Designed by Sign-X</a>
-      </div>
-      <div class="footer-col">
-        <h4>Courses</h4>
-        <p>We have a great set of courses for you to choose from to help further your education.</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -646,6 +639,37 @@
         }
       });
     });
+
+    // Image slider logic
+    window.onload = function() {
+      const sliderImages = document.querySelectorAll('.slider-image');
+      let currentSlide = 0;
+      sliderImages.forEach((img, idx) => {
+        if(idx === 0) {
+          img.style.display = 'block';
+          img.style.position = '';
+        } else {
+          img.style.display = 'none';
+          img.style.position = 'absolute';
+          img.style.top = '0';
+          img.style.left = '0';
+        }
+      });
+      setInterval(() => {
+        sliderImages.forEach((img, idx) => {
+          if(idx === (currentSlide + 1) % sliderImages.length) {
+            img.style.display = 'block';
+            img.style.position = '';
+          } else {
+            img.style.display = 'none';
+            img.style.position = 'absolute';
+            img.style.top = '0';
+            img.style.left = '0';
+          }
+        });
+        currentSlide = (currentSlide + 1) % sliderImages.length;
+      }, 5000);
+    }
   </script>
 </body>
 </html> 

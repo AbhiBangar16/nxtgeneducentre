@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="course-card scroll-animate">
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="course-image">
-                        <?php the_post_thumbnail('course-thumbnail'); ?>
+                        <?php the_post_thumbnail('medium'); ?>
                     </div>
                 <?php endif; ?>
                 <h3><?php the_title(); ?></h3>
@@ -46,38 +46,8 @@ get_header(); ?>
             endwhile;
             wp_reset_postdata();
         else :
-            // Default courses if no custom post types
+            // Course cards will be added here
         ?>
-            <div class="course-card scroll-animate">
-                <h3>Computer Science</h3>
-                <p>Comprehensive computer science courses covering programming, algorithms, and software development.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="course-card scroll-animate">
-                <h3>Mathematics</h3>
-                <p>Advanced mathematics courses including calculus, algebra, and statistics for all levels.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="course-card scroll-animate">
-                <h3>Physics</h3>
-                <p>Physics courses covering mechanics, thermodynamics, and modern physics concepts.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="course-card scroll-animate">
-                <h3>Chemistry</h3>
-                <p>Chemistry courses including organic, inorganic, and physical chemistry fundamentals.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="course-card scroll-animate">
-                <h3>Biology</h3>
-                <p>Biology courses covering cell biology, genetics, and human anatomy.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="course-card scroll-animate">
-                <h3>English Literature</h3>
-                <p>English literature courses covering classic and modern works from various periods.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
         <?php endif; ?>
     </div>
 
