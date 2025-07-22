@@ -294,10 +294,17 @@ header:hover {
 
 /* Main Content */
 .main-content { 
-  max-width: 1200px; 
+  max-width: 1400px; 
   margin: 0 auto; 
-  padding: 0 2rem; 
+  padding: 0 1rem; 
   animation: fadeIn 1.2s 0.4s both; 
+}
+
+.main-content .features-section {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 2rem !important;
+  margin: 3rem 0 !important;
 }
 
 @keyframes fadeIn { 
@@ -946,6 +953,12 @@ header:hover {
   .downloads-grid { 
     grid-template-columns: 1fr; 
   } 
+}
+
+@media (min-width: 1200px) {
+  .main-content .features-section {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
 }
 
 @media (max-width: 600px) {
